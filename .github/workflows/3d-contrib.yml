@@ -1,0 +1,24 @@
+name: GitHub Contributor Stats (3D)
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  contrib:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate 3D contributions
+        uses: github-contributor-stats/github-contributor-stats@v1
+        with:
+          image_type: 'svg'
+      - name: Commit & Push
+        uses: actions-js/push@master
+        with:
+          message: "Add 3D contributions"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
