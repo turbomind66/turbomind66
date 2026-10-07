@@ -1,47 +1,46 @@
+import os, re, random, math, colorsys, datetime
 
-import random, colorsys, os, math, xml.dom.minidom as M, re, datetime
-
-OUT = os.path.join(os.getcwd(), 'assets')
-os.makedirs(OUT, exist_ok=True)
-TODAY = datetime.date.today().strftime('%Y%m%d')
-AMP = 14
+AMP = 26
 PERIODS = 1.0
+BASELINE = 38
+VIEW_W, VIEW_H = 1200, 140
 
-def hsv2(h):
-    r, g, b = colorsys.hsv_to_rgb(h, 0.80, 0.95)
-    return (int(r*255), int(g*255), int(b*255))
-def two_color_palette():
-    base = random.random()
-    return [hsv2(base), hsv2((base + 0.5) % 1.0)]
-def hexc(c): return '#%02x%02x%02x' % c
-def sine_path(kind, w=1200, h=120):
-    mid = h * 0.5
-    phase = random.random() * math.tau
-    wy = lambda x: mid + AMP * math.sin(2*math.pi*PERIODS*x/w + phase)
-    pts = [(0, 0), (w, 0)] if kind == 'top' else [(0, h), (w, h)]
-    x = w
-    while x >= 0:
-        pts.append((x, wy(x))); x -= 8
-    pts.append((0, wy(0)))
-    return 'M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in pts) + ' Z'
-def make_wave(kind, pal):
-    stops = ''.join(f'<stop offset="{i/(len(pal)-1):.3f}" stop-color="{hexc(pal[i])}"/>' for i in range(len(pal)))
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" preserveAspectRatio="none">\n'
-            f'  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">{stops}</linearGradient></defs>\n'
-            f'  <path d="{sine_path(kind)}" fill="url(#g)"/>\n</svg>\n')
+def hsl_hex(h, s=0.72, l=0.56):
+    r, g, b = colorsys.hls_to_rgb(h, l, s)
+    return '#%02x%02x%02x' % (int(r*255), int(g*255), int(b*255))
 
-for kind in ('top', 'bottom'):
-    pal = two_color_palette()
-    svg = make_wave(kind, pal)
-    M.parseString(svg)
-    fn = os.path.join(OUT, f'wave-{kind}-{TODAY}.svg')
-    with open(fn, 'w', encoding='utf-8') as f: f.write(svg)
-    print('wrote', fn, [hexc(c) for c in pal])
+def gen_wave(stops):
+    c1, c2 = stops
+    pts = []
+    n = 240
+    for i in range(n+1):
+        x = i / n * VIEW_W
+        y = BASELINE + AMP * math.sin((i/n)*PERIODS*2*math.pi)
+        pts.append(f'{x:.1f},{y:.1f}')
+    d = f'M0,{VIEW_H} L0,{BASELINE+AMP*math.sin(0):.1f} L' + ' L'.join(pts)
+    d += f' L{VIEW_W},{VIEW_H} Z'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {VIEW_W} {VIEW_H}" '
+            f'preserveAspectRatio="none" width="100%" height="{VIEW_H}>\n'
+            f'  <defs>\n    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">\n'
+            f'      <stop offset="0%" stop-color="{c1}"/>\n      <stop offset="100%" stop-color="{c2}"/>\n'
+            f'    </linearGradient>\n  </defs>\n  <path d="{d}" fill="url(#g)"/>\n</svg>\n')
 
-readme = os.path.join(os.getcwd(), 'README.md')
-if os.path.exists(readme):
-    with open(readme, encoding='utf-8') as f: txt = f.read()
-    txt = re.sub(r'\./assets/wave-top[^"]*\.svg', f'./assets/wave-top-{TODAY}.svg', txt)
-    txt = re.sub(r'\./assets/wave-bottom[^"]*\.svg', f'./assets/wave-bottom-{TODAY}.svg', txt)
-    with open(readme, 'w', encoding='utf-8') as f: f.write(txt)
-    print('readme updated')
+base = random.random()
+stops = (hsl_hex(base), hsl_hex((base + 0.5) % 1.0))
+today = datetime.date.today().strftime('%Y%m%d')
+here = os.path.dirname(os.path.abspath(__file__))
+assets = os.path.abspath(os.path.join(here, '..', 'assets'))
+os.makedirs(assets, exist_ok=True)
+top = os.path.join(assets, f'wave-top-{today}.svg')
+bot = os.path.join(assets, f'wave-bottom-{today}.svg')
+open(top, 'w').write(gen_wave(stops))
+open(bot, 'w').write(gen_wave(stops))
+rm = os.path.abspath(os.path.join(here, '..', 'README.md'))
+if os.path.exists(rm):
+    t = open(rm).read()
+    t = re.sub(r'\./assets/wave-top-[0-9]+\.svg', f'./assets/wave-top-{today}.svg', t)
+    t = re.sub(r'\./assets/wave-bottom-[0-9]+\.svg', f'./assets/wave-bottom-{today}.svg', t)
+    t = t.replace('./assets/wave-top.svg', f'./assets/wave-top-{today}.svg')
+    t = t.replace('./assets/wave-bottom.svg', f'./assets/wave-bottom-{today}.svg')
+    open(rm, 'w').write(t)
+print('wave generated:', top, bot, 'pair', stops)
