@@ -1,4 +1,4 @@
-import random, colorsys, os, xml.dom.minidom as M
+import random, colorsys, os, math, xml.dom.minidom as M
 
 OUT = os.path.join(os.getcwd(), 'assets')
 os.makedirs(OUT, exist_ok=True)
@@ -14,22 +14,33 @@ def random_palette(n=4):
 
 def hexc(c): return '#%02x%02x%02x' % c
 
+def sine_path(kind, w=1200, h=120, amp=22, periods=3.0):
+    midline = h * 0.5
+    phase = random.random() * math.tau
+    def wave_y(x):
+        return midline + amp * math.sin(2*math.pi*periods*x/w + phase)
+    pts = []
+    step = 8
+    if kind == 'top':
+        pts.append((0, 0)); pts.append((w, 0))
+        x = w
+        while x >= 0:
+            pts.append((x, wave_y(x))); x -= step
+        pts.append((0, wave_y(0)))
+    else:
+        pts.append((0, h)); pts.append((w, h))
+        x = w
+        while x >= 0:
+            pts.append((x, wave_y(x))); x -= step
+        pts.append((0, wave_y(0)))
+    return 'M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in pts) + ' Z'
+
 def make_wave(kind, palette):
     w, h = 1200, 120
     stops = ''.join(
         f'<stop offset="{i/(len(palette)-1):.3f}" stop-color="{hexc(palette[i])}"/>'
         for i in range(len(palette)))
-    if kind == 'top':
-        path = ('M0,0 L1200,0 L1200,55 '
-                'C1050,105 950,15 800,55 '
-                'C650,95 550,15 400,55 '
-                'C250,95 150,15 0,55 Z')
-    else:
-        path = ('M0,55 '
-                'C150,15 250,95 400,55 '
-                'C550,15 650,95 800,55 '
-                'C950,15 1050,95 1200,55 '
-                'L1200,120 L0,120 Z')
+    path = sine_path(kind)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
             f'viewBox="0 0 {w} {h}" preserveAspectRatio="none">\n'
             f'  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">{stops}</linearGradient></defs>\n'
@@ -42,4 +53,4 @@ for kind in ('top', 'bottom'):
     M.parseString(svg)
     with open(os.path.join(OUT, f'wave-{kind}.svg'), 'w', encoding='utf-8') as f:
         f.write(svg)
-    print('wrote', kind, [hexc(c) for c in pal])
+    print('wrote', kind, 'palette', [hexc(c) for c in pal], 'len', len(svg))
