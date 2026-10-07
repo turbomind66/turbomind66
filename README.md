@@ -7,7 +7,7 @@
 
 ![Typing SVG](./assets/typing.svg)
 
-<img src="./assets/wave-top.svg" />
+<img src="./assets/wave-top-20261007.svg" />
 
 ## 🖥️ Whoami
 
@@ -50,6 +50,6 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 ## 💡 Quote of the Day
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=radical&quoteCategory=programming)
 
-<img src="./assets/wave-bottom.svg" />
+<img src="./assets/wave-bottom-20261007.svg" />
 
 ---
