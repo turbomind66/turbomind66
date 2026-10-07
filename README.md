@@ -7,7 +7,7 @@
 
 ![Typing SVG](./assets/typing.svg)
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:a855f7,0.5:7c8cf8,1:22d3ee&height=100&section=header">
+<img src="./assets/wave-top.svg" />
 
 ## 🖥️ Whoami
 
@@ -50,7 +50,7 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 ## 💡 Quote of the Day
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=radical&quoteCategory=programming)
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:a855f7,0.5:7c8cf8,1:22d3ee&height=100&section=header">
+<img src="./assets/wave-bottom.svg" />
 
 ---
-_Powered by [Platane/snk](https://github.com/Platane/snk) · [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) · [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) · [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib) · [skillicons](https://skillicons.dev) · [capsule-render](https://github.com/kyechan99/capsule-render) · [github-readme-quotes](https://github.com/shravan20/github-readme-quotes)_
+<img src="./assets/wave-bottom.svg" />
