@@ -1,5 +1,3 @@
-# Hi there 👋 I'm turbomind66
-
 <div align="center">
 
 <img src="./assets/banner.svg" alt="turbomind66" />
