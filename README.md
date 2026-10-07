@@ -2,6 +2,29 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Building+AI+assistants+for+audit+workflows;Python+%2F+Go+%2F+Node+full-stack;Automating+the+boring+stuff;Audit+Office+%40+YuTongGong&font=Fira+Code&size=24&duration=4000&pause=800&color=36BCF7&center=true&vCenter=true&width=600&height=50)
 
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=100&section=header">
+
+## 🖥️ Whoami
+
+```text
+$ whoami
+turbomind66 — 审计 AI 助手 builder / 全栈自动化爱好者
+
+$ cat focus.txt
+把繁琐的审计流程，用 AI 和自动化跑起来 🤖
+
+$ ls skills/
+Python/  Go/  Node.js/  网关逆向/  审计数字化/
+```
+
+## 🧰 Tech Stack
+[![My Skills](https://skillicons.dev/icons?i=python,go,nodejs,rust,docker,linux,git,github,vscode,cloudflare,redis,postgresql,fastapi&theme=dark)](https://skillicons.dev)
+
+## 🚀 Featured Projects
+[![workbuddy2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy2api-python)
+[![qclaw2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=qclaw2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/qclaw2api-python)
+[![workbuddy-daily](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy-daily&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy-daily)
+
 ## 👀 Visitor Count
 ![Visitor Count](https://komarev.com/ghpvc/?username=turbomind66&label=VISITORS&color=orange&style=flat-square)
 
@@ -19,5 +42,10 @@
 ## 🌐 3D Contribution Globe
 ![3d globe](./profile-3d-contrib/profile-green-animate.svg)
 
+## 💡 Quote of the Day
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=radical&quoteCategory=programming)
+
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=100&section=header">
+
 ---
-_Powered by [Platane/snk](https://github.com/Platane/snk) · [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) · [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) · [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib)_
+_Powered by [Platane/snk](https://github.com/Platane/snk) · [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) · [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) · [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib) · [skillicons](https://skillicons.dev) · [capsule-render](https://github.com/kyechan99/capsule-render) · [github-readme-quotes](https://github.com/shravan20/github-readme-quotes)_
