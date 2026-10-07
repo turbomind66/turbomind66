@@ -2,15 +2,7 @@
 
 <div align="center">
 
-<pre>
-<span style="color:#a855f7">   __             __                    _           _______ _____</span>
-<span style="color:#8674f5">  / /___  _______/ /_  ____  ____ ___  (_)___  ____/ / ___// ___/</span>
-<span style="color:#6594f2"> / __/ / / / ___/ __ \/ __ \/ __ `__ \/ / __ \/ __  / __ \/ __ \</span>
-<span style="color:#44b4f0">/ /_/ /_/ / /  / /_/ / /_/ / / / / / / / / / / /_/ / /_/ / /_/ /</span>
-<span style="color:#22d3ee">\__/\__,_/_/  /_.___/\____/_/ /_/ /_/_/_/ /_/\__,_/\____/\____/</span>
-
-
-</pre>
+<img src="./assets/banner.svg" alt="turbomind66" />
 
 </div>
 
