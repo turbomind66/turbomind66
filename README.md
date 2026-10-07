@@ -17,7 +17,7 @@
 ![snake](https://raw.githubusercontent.com/turbomind66/turbomind66/output/github-contribution-grid-snake.svg)
 
 ## 🌐 3D Contribution Globe
-![3d globe](./profile-3d-contrib/profile-night-view.svg)
+![3d globe](./profile-3d-contrib/profile-green-animate.svg)
 
 ---
-_Powered by [Platane/snk](https://github.com/Platane/snk) · [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) · [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) · [github-contributor-stats](https://github.com/github-contributor-stats/github-contributor-stats)_
+_Powered by [Platane/snk](https://github.com/Platane/snk) · [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) · [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) · [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib)_
