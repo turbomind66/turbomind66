@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Generate self-hosted random two-color wave SVGs for profile README.
-Top wave: peaks point DOWN (eave style). Bottom wave: peaks point UP.
-Amplitude is intentionally small/flat; one full sine wave across width.
+Top wave: peaks point DOWN. Peaks steep & pointed, troughs rounded & deep.
 """
 import math, random, re, os, datetime
 
 W, H = 1200, 140
 AMP = 13
 PERIODS = 1.0
+PEAK_POW = 0.6
+TROUGH_POW = 1.2
 
 
 def hsl(h, s, l):
@@ -35,11 +36,17 @@ def hsl(h, s, l):
     return "#%02x%02x%02x" % (round(r * 255), round(g * 255), round(b * 255))
 
 
+def wave_y(x):
+    s = math.sin(2 * math.pi * PERIODS * x / W)
+    if s >= 0:
+        shaped = s ** PEAK_POW
+    else:
+        shaped = -((-s) ** TROUGH_POW)
+    return H / 2 + AMP * shaped
+
+
 def wave_path(kind, c1, c2):
-    pts = []
-    for i in range(0, W + 1, 8):
-        y = H / 2 + AMP * math.sin(2 * math.pi * PERIODS * i / W)
-        pts.append((i, y))
+    pts = [(i, wave_y(i)) for i in range(0, W + 1, 8)]
     if kind == "top":
         d = "M0,0 L0,%.1f " % pts[0][1]
         d += " ".join("L%.1f,%.1f" % (x, y) for x, y in pts)
