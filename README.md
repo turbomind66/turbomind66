@@ -1,6 +1,6 @@
 # Hi there 👋 I'm turbomind66
 
-![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Building+AI+assistants+for+audit+workflows;Python+%2F+Go+%2F+Node+full-stack;Automating+the+boring+stuff;Audit+Office+%40+YuTongGong&font=Fira+Code&size=24&duration=4000&pause=800&color=36BCF7&center=true&vCenter=true&width=600&height=50)
+![Typing SVG](./assets/typing.svg)
 
 <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=100&section=header">
 
@@ -23,7 +23,7 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 ## 🚀 Featured Projects
 [![workbuddy2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy2api-python)
 [![qclaw2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=qclaw2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/qclaw2api-python)
-[![workbuddy-daily](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy-daily&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy-daily)
+[![nigo-skills](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=nigo-skills&theme=radical&hide_border=true)](https://github.com/turbomind66/nigo-skills)
 
 ## 👀 Visitor Count
 ![Visitor Count](https://komarev.com/ghpvc/?username=turbomind66&label=VISITORS&color=orange&style=flat-square)
