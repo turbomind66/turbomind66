@@ -2,24 +2,24 @@
 <style>.t { font-family: Consolas, "Courier New", monospace; font-size: 24px; font-weight: 600; fill: #36BCF7; }.c { fill: #36BCF7; }</style>
 <defs>
 <clipPath id="clip0">
-<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1580;0.2382;0.3119;1.0" values="0;604.8;604.8;0;0"/></rect>
+<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1644;0.2479;0.3246;1.0" values="0;604.8;604.8;0;0"/></rect>
 </clipPath>
 <clipPath id="clip1">
-<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.3119;0.4208;0.5010;0.5522;1.0" values="0;0;417.6;417.6;0;0"/></rect>
+<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.3246;0.4379;0.5214;0.5746;1.0" values="0;0;417.6;417.6;0;0"/></rect>
 </clipPath>
 <clipPath id="clip2">
-<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5522;0.6535;0.7337;0.7813;1.0" values="0;0;388.8;388.8;0;0"/></rect>
+<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5746;0.6801;0.7636;0.8132;1.0" values="0;0;388.8;388.8;0;0"/></rect>
 </clipPath>
 <clipPath id="clip3">
-<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.7813;0.8756;0.9559;1.0000;1.0" values="0;0;360.0;360.0;0;0"/></rect>
+<rect x="12" y="0" height="50" width="0"><animate attributeName="width" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.8132;0.8836;0.9671;1.0000;1.0" values="0;0;259.2;259.2;0;0"/></rect>
 </clipPath>
 </defs>
 <text class="t" x="12" y="33" clip-path="url(#clip0)" lengthAdjust="spacingAndGlyphs" textLength="604.8">Building AI assistants for audit workflows</text>
 <text class="t" x="12" y="33" clip-path="url(#clip1)" lengthAdjust="spacingAndGlyphs" textLength="417.6">Python / Go / Node full-stack</text>
 <text class="t" x="12" y="33" clip-path="url(#clip2)" lengthAdjust="spacingAndGlyphs" textLength="388.8">Automating the boring stuff</text>
-<text class="t" x="12" y="33" clip-path="url(#clip3)" lengthAdjust="spacingAndGlyphs" textLength="360.0">Audit Office @  A Corp</text>
-<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1580;0.2382;0.3119;1.0" values="12;616.8;616.8;12;12"/><animate attributeName="opacity" dur="19.94s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.3119;1.0" values="1;0;0"/></rect>
-<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.3119;0.4208;0.5010;0.5522;1.0" values="12;12;429.6;429.6;12;12"/><animate attributeName="opacity" dur="19.94s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.3119;0.5522;1.0" values="0;1;0;0"/></rect>
-<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5522;0.6535;0.7337;0.7813;1.0" values="12;12;400.8;400.8;12;12"/><animate attributeName="opacity" dur="19.94s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5522;0.7813;1.0" values="0;1;0;0"/></rect>
-<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.94s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.7813;0.8756;0.9559;1.0000;1.0" values="12;12;372.0;372.0;12;12"/><animate attributeName="opacity" dur="19.94s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.7813;1.0000;1.0" values="0;1;0;0"/></rect>
+<text class="t" x="12" y="33" clip-path="url(#clip3)" lengthAdjust="spacingAndGlyphs" textLength="259.2">Audit Office @ YTG</text>
+<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.1644;0.2479;0.3246;1.0" values="12;616.8;616.8;12;12"/><animate attributeName="opacity" dur="19.16s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.3246;1.0" values="1;0;0"/></rect>
+<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.3246;0.4379;0.5214;0.5746;1.0" values="12;12;429.6;429.6;12;12"/><animate attributeName="opacity" dur="19.16s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.3246;0.5746;1.0" values="0;1;0;0"/></rect>
+<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5746;0.6801;0.7636;0.8132;1.0" values="12;12;400.8;400.8;12;12"/><animate attributeName="opacity" dur="19.16s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5746;0.8132;1.0" values="0;1;0;0"/></rect>
+<rect class="c" x="12" y="13" width="7.9" height="22" opacity="0"><animate attributeName="x" dur="19.16s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.8132;0.8836;0.9671;1.0000;1.0" values="12;12;271.2;271.2;12;12"/><animate attributeName="opacity" dur="19.16s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.8132;1.0000;1.0" values="0;1;0;0"/></rect>
 </svg>
