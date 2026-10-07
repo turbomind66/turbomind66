@@ -1,5 +1,16 @@
 # Hi there 👋 I'm turbomind66
 
+```text
+   __             __                    _           _______ _____
+  / /___  _______/ /_  ____  ____ ___  (_)___  ____/ / ___// ___/
+ / __/ / / / ___/ __ \/ __ \/ __ `__ \/ / __ \/ __  / __ \/ __ \
+/ /_/ /_/ / /  / /_/ / /_/ / / / / / / / / / / /_/ / /_/ / /_/ /
+\__/\__,_/_/  /_.___/\____/_/ /_/ /_/_/_/ /_/\__,_/\____/\____/
+
+
+```
+
+
 ![Typing SVG](./assets/typing.svg)
 
 <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=100&section=header">
