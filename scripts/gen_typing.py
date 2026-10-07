@@ -27,7 +27,7 @@ PHRASES = [
     "Building AI assistants for audit workflows",
     "Python / Go / Node full-stack",
     "Automating the boring stuff",
-    "Audit Office @ YuTongGong",
+    "Audit Office @ YTG",
 ]
 
 
