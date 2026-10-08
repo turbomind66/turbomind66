@@ -1,90 +1,72 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Generate self-hosted random two-color wave SVGs for profile README.
-Top wave: peaks point DOWN. Peaks steep & pointed, troughs rounded & deep.
+"""Generate full-width random two-color waves and update README refs.
+Single wave, AMP=13, sharp peak (pow 0.6) / round trough (pow 1.2).
+Top wave fills from top edge (peak down); bottom fills to bottom (peak up).
+Writes wave-top-YYYYMMDD-HHMM.svg / wave-bottom-YYYYMMDD-HHMM.svg and rewrites README img refs (width=100%).
 """
-import math, random, re, os, datetime
+import re, time, random, math, colorsys, io, os
 
-W, H = 1200, 140
+W, VIEW_H = 1440, 140
 AMP = 13
 PERIODS = 1.0
-PEAK_POW = 0.6
-TROUGH_POW = 1.2
+PEAK_POW, TROUGH_POW = 0.6, 1.2
+STEP = 8
+MID = VIEW_H / 2.0
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+def shape(sv):
+    return sv ** PEAK_POW if sv >= 0 else -((-sv) ** TROUGH_POW)
 
-def hsl(h, s, l):
-    def hue(p, q, t):
-        if t < 0:
-            t += 1
-        if t > 1:
-            t -= 1
-        if t < 1 / 6:
-            return p + (q - p) * 6 * t
-        if t < 1 / 2:
-            return q
-        if t < 2 / 3:
-            return p + (q - p) * (2 / 3 - t) * 6
-        return p
-    if s == 0:
-        r = g = b = l
+def wave_points(phase):
+    pts = []
+    x = 0
+    while x <= W:
+        sv = math.sin(2 * math.pi * (x / (W / PERIODS)) + phase)
+        pts.append((x, MID - AMP * shape(sv)))
+        x += STEP
+    return pts
+
+def gen_svg(top, phase, c1, c2):
+    line = ' '.join('%.1f,%.1f' % p for p in wave_points(phase))
+    if top:
+        d = 'M0,0 L%s L%d,0 Z' % (line, W)
     else:
-        q = l * (1 + s) if l < 0.5 else l + s - l * s
-        p = 2 * l - q
-        r = hue(p, q, h + 1 / 3)
-        g = hue(p, q, h)
-        b = hue(p, q, h - 1 / 3)
-    return "#%02x%02x%02x" % (round(r * 255), round(g * 255), round(b * 255))
-
-
-def wave_y(x):
-    s = math.sin(2 * math.pi * PERIODS * x / W)
-    if s >= 0:
-        shaped = s ** PEAK_POW
-    else:
-        shaped = -((-s) ** TROUGH_POW)
-    return H / 2 + AMP * shaped
-
-
-def wave_path(kind, c1, c2):
-    pts = [(i, wave_y(i)) for i in range(0, W + 1, 8)]
-    if kind == "top":
-        d = "M0,0 L0,%.1f " % pts[0][1]
-        d += " ".join("L%.1f,%.1f" % (x, y) for x, y in pts)
-        d += " L%d,0 Z" % W
-    else:
-        d = "M0,%d L0,%.1f " % (H, pts[0][1])
-        d += " ".join("L%.1f,%.1f" % (x, y) for x, y in pts)
-        d += " L%d,%d Z" % (W, H)
+        d = 'M0,%d L%s L%d,%d Z' % (VIEW_H, line, W, VIEW_H)
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
-            'preserveAspectRatio="none" width="100%%" height="%d">'
-            '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">'
-            '<stop offset="0" stop-color="%s"/>'
-            '<stop offset="1" stop-color="%s"/>'
-            '</linearGradient></defs>'
-            '<path d="%s" fill="url(#g)"/></svg>') % (W, H, H, c1, c2, d)
-
+            'preserveAspectRatio="none" width="%d" height="%d">\n' % (W, VIEW_H, W, VIEW_H)
+            + '  <defs>\n'
+            + '    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">\n'
+            + '      <stop offset="0%%" stop-color="%s"/>\n' % c1
+            + '      <stop offset="100%%" stop-color="%s"/>\n' % c2
+            + '    </linearGradient>\n  </defs>\n'
+            + '  <path d="%s" fill="url(#g)"/>\n</svg>\n' % d)
 
 def main():
-    base = random.random()
-    c1 = hsl(base, 0.7, 0.6)
-    c2 = hsl((base + 0.5) % 1, 0.7, 0.6)
-    ts = datetime.datetime.now().strftime("%Y%m%d-%H%M")
-    top = "wave-top-%s.svg" % ts
-    bot = "wave-bottom-%s.svg" % ts
-    os.makedirs("assets", exist_ok=True)
-    with open(os.path.join("assets", top), "w") as f:
-        f.write(wave_path("top", c1, c2))
-    with open(os.path.join("assets", bot), "w") as f:
-        f.write(wave_path("bottom", c1, c2))
-    if os.path.exists("README.md"):
-        with open("README.md") as f:
-            t = f.read()
-        t = re.sub(r"(?:\./)?assets/wave-top-[\w-]+\.svg", "assets/" + top, t)
-        t = re.sub(r"(?:\./)?assets/wave-bottom-[\w-]+\.svg", "assets/" + bot, t)
-        with open("README.md", "w") as f:
-            f.write(t)
-    print("generated", top, bot)
+    ts = time.strftime('%Y%m%d-%H%M')
+    top_name = 'wave-top-%s.svg' % ts
+    bot_name = 'wave-bottom-%s.svg' % ts
+    base_hue = random.random()
+    c1 = '#%02x%02x%02x' % tuple(int(v * 255) for v in colorsys.hls_to_rgb(base_hue, 0.6, 0.65))
+    c2 = '#%02x%02x%02x' % tuple(int(v * 255) for v in colorsys.hls_to_rgb((base_hue + 0.45) % 1.0, 0.6, 0.65))
+    phase = random.random() * 2 * math.pi
+    svg_top = gen_svg(True, phase, c1, c2)
+    svg_bot = gen_svg(False, phase, c1, c2)
+    assets = os.path.join(ROOT, 'assets')
+    os.makedirs(assets, exist_ok=True)
+    with io.open(os.path.join(assets, top_name), 'w', encoding='utf-8') as f:
+        f.write(svg_top)
+    with io.open(os.path.join(assets, bot_name), 'w', encoding='utf-8') as f:
+        f.write(svg_bot)
+    readme_path = os.path.join(ROOT, 'README.md')
+    with io.open(readme_path, 'r', encoding='utf-8') as f:
+        readme = f.read()
+    readme = re.sub(r'<img src="assets/wave-top-[\w\-]+\.svg"[^>]*/>',
+                    '<img src="assets/%s" width="100%%" />' % top_name, readme)
+    readme = re.sub(r'<img src="assets/wave-bottom-[\w\-]+\.svg"[^>]*/>',
+                    '<img src="assets/%s" width="100%%" />' % bot_name, readme)
+    with io.open(readme_path, 'w', encoding='utf-8') as f:
+        f.write(readme)
+    print('generated', top_name, bot_name, 'colors', c1, c2)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
