@@ -66,8 +66,14 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 </table>
 
 ## 🔥 Streak & 🏆 Trophies
-![streak](https://streak-stats.demolab.com/?user=turbomind66&theme=radical&hide_border=true)
-![trophies](assets/trophy-20261008.svg)
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com/?user=turbomind66&theme=radical&hide_border=true)](https://streak-stats.demolab.com/?user=turbomind66)
+<br/>
+<img src="assets/trophy-20261008.svg" width="865" alt="GitHub Trophies" />
+
+</div>
 
 ## 🐍 Contribution Snake
 ![snake](https://raw.githubusercontent.com/turbomind66/turbomind66/output/github-contribution-grid-snake.svg)
@@ -76,7 +82,12 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 ![3d globe](./profile-3d-contrib/profile-green-animate.svg)
 
 ## 💡 Quote of the Day
+
+<div align="center">
+
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=radical&quoteCategory=programming)
+
+</div>
 
 <img src="assets/wave-bottom-20261008-0254.svg" width="100%" />
 
