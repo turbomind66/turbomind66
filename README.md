@@ -39,7 +39,7 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 
 ## 🔥 Streak & 🏆 Trophies
 ![streak](https://streak-stats.demolab.com/?user=turbomind66&theme=radical&hide_border=true)
-![trophies](https://github-profile-trophy.vercel.app/?username=turbomind66&theme=radical&column=7&no-frame=true)
+![trophies](assets/trophy-20261008.svg)
 
 ## 🐍 Contribution Snake
 ![snake](https://raw.githubusercontent.com/turbomind66/turbomind66/output/github-contribution-grid-snake.svg)
