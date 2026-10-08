@@ -26,16 +26,44 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 [![My Skills](https://skillicons.dev/icons?i=python,go,nodejs,rust,docker,linux,git,github,vscode,cloudflare,redis,postgresql,fastapi&theme=dark)](https://skillicons.dev)
 
 ## 🚀 Featured Projects
-[![workbuddy2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy2api-python)
-[![excel-vba-round-selected-cells](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=excel-vba-round-selected-cells&theme=radical&hide_border=true)](https://github.com/turbomind66/excel-vba-round-selected-cells)
-[![word-vba-two-decimal-format](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=word-vba-two-decimal-format&theme=radical&hide_border=true)](https://github.com/turbomind66/word-vba-two-decimal-format)
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/turbomind66/excel-vba-round-selected-cells">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=excel-vba-round-selected-cells&amp;theme=radical&amp;hide_border=true" alt="excel-vba-round-selected-cells" />
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/turbomind66/word-vba-two-decimal-format">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=word-vba-two-decimal-format&amp;theme=radical&amp;hide_border=true" alt="word-vba-two-decimal-format" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="https://github.com/turbomind66/workbuddy2api-python">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=workbuddy2api-python&amp;theme=radical&amp;hide_border=true" alt="workbuddy2api-python" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## 👀 Visitor Count
 ![Visitor Count](https://komarev.com/ghpvc/?username=turbomind66&label=VISITORS&color=orange&style=flat-square)
 
 ## 📊 GitHub Stats
-![stats](https://github-readme-stats.vercel.app/api?username=turbomind66&show_icons=true&theme=radical&hide_border=true)
-![top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=turbomind66&layout=compact&theme=radical&hide_border=true)
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img height="165" src="https://github-readme-stats.vercel.app/api?username=turbomind66&amp;show_icons=true&amp;theme=radical&amp;hide_border=true" alt="GitHub Stats" />
+    </td>
+    <td width="50%" align="center">
+      <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=turbomind66&amp;layout=compact&amp;theme=radical&amp;hide_border=true" alt="Most Used Languages" />
+    </td>
+  </tr>
+</table>
 
 ## 🔥 Streak & 🏆 Trophies
 ![streak](https://streak-stats.demolab.com/?user=turbomind66&theme=radical&hide_border=true)
@@ -53,3 +81,4 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 <img src="assets/wave-bottom-20261008-0254.svg" width="100%" />
 
 ---
+
