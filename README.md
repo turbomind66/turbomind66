@@ -30,20 +30,25 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 <table>
   <tr>
     <td width="50%" align="center">
-      <a href="https://github.com/turbomind66/excel-vba-round-selected-cells">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=excel-vba-round-selected-cells&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="excel-vba-round-selected-cells" />
+      <a href="https://github.com/turbomind66/audit-ai-assistant">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=audit-ai-assistant&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="audit-ai-assistant" />
       </a>
     </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/turbomind66/workbuddy2api-python">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=workbuddy2api-python&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="workbuddy2api-python" />
+      </a>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <a href="https://github.com/turbomind66/word-vba-two-decimal-format">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=word-vba-two-decimal-format&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="word-vba-two-decimal-format" />
       </a>
     </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <a href="https://github.com/turbomind66/workbuddy2api-python">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=workbuddy2api-python&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="workbuddy2api-python" />
+    <td width="50%" align="center">
+      <a href="https://github.com/turbomind66/excel-vba-round-selected-cells">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=excel-vba-round-selected-cells&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="excel-vba-round-selected-cells" />
       </a>
     </td>
   </tr>
