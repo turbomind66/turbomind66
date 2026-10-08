@@ -1,0 +1,39 @@
+name: generate-trophy
+on:
+  schedule: [{ cron: "0 1 * * *" }]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  trophy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: d
+        run: echo "date=$(date +'%Y%m%d')" >> "$GITHUB_OUTPUT"
+
+      - name: Generate trophy SVG
+        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          file: assets/trophy-${{ steps.d.outputs.date }}.svg
+          theme: radical
+          no-frame: "true"
+          no-background: "true"
+          max-cols: "7"
+
+      - name: Update README reference
+        run: |
+          D=${{ steps.d.outputs.date }}
+          sed -i -E "s#assets/trophy-[0-9]+\.svg#assets/trophy-$D.svg#g" README.md
+          head -1 <(grep trophies README.md) || true
+
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate trophy svg"
+          file_pattern: "assets/trophy-*.svg README.md"
