@@ -18,7 +18,7 @@ jobs:
       - name: Generate trophy SVG
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TROPHY_TOKEN }}
           username: ${{ github.repository_owner }}
           file: assets/trophy-${{ steps.d.outputs.date }}.svg
           theme: radical
