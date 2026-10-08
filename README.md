@@ -28,7 +28,7 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 ## 🚀 Featured Projects
 [![workbuddy2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=workbuddy2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/workbuddy2api-python)
 [![qclaw2api-python](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=qclaw2api-python&theme=radical&hide_border=true)](https://github.com/turbomind66/qclaw2api-python)
-[![nigo-skills](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=nigo-skills&theme=radical&hide_border=true)](https://github.com/turbomind66/nigo-skills)
+[![word-vba-two-decimal-format](https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&repo=word-vba-two-decimal-format&theme=radical&hide_border=true)](https://github.com/turbomind66/word-vba-two-decimal-format)
 
 ## 👀 Visitor Count
 ![Visitor Count](https://komarev.com/ghpvc/?username=turbomind66&label=VISITORS&color=orange&style=flat-square)
