@@ -35,8 +35,8 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
       </a>
     </td>
     <td width="50%" align="center">
-      <a href="https://github.com/turbomind66/workbuddy2api-python">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=workbuddy2api-python&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="workbuddy2api-python" />
+      <a href="https://github.com/turbomind66/gitvisor">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=turbomind66&amp;repo=gitvisor&amp;theme=radical&amp;hide_border=true&amp;cache_bust=20261008" alt="gitvisor" />
       </a>
     </td>
   </tr>
