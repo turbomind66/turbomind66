@@ -7,7 +7,7 @@
 
 ![Typing SVG](./assets/typing.svg)
 
-<img src="assets/wave-top-20261103-0708.svg" width="100%" />
+<img src="assets/wave-top-20261104-0653.svg" width="100%" />
 
 ## 🖥️ Whoami
 
@@ -90,7 +90,7 @@ Python/  Go/  Node.js/  网关逆向/  审计数字化/
 
 </div>
 
-<img src="assets/wave-bottom-20261103-0708.svg" width="100%" />
+<img src="assets/wave-bottom-20261104-0653.svg" width="100%" />
 
 ---
 
